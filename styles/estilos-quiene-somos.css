@@ -1,0 +1,75 @@
+/*-----evita desbordamiento de la pagina en móviles */
+
+html,
+body {
+    overflow-x: hidden;
+    /* Oculta el scroll horizontal */
+    max-width: 100%;
+    /* Evita que el contenido crezca más allá del ancho de la pantalla */
+    background-color: rgb(255, 252, 247);
+}
+
+
+
+
+/*-------logo y nombre-menu-------*/
+
+/*----Usa flexbox con column para organizar los elementos en una columna centrada.------------*/
+
+.cont-logo-menu {
+    display: flex;
+    /* Usa Flexbox para organizar los elementos */
+    flex-direction: column;
+    /* Los elementos se apilan en columna */
+    align-items: center;
+    /* Centra los elementos horizontalmente */
+    text-align: center;
+    /* Asegura que el texto esté centrado */
+    color: rgb(70, 33, 1);
+    background-color: rgb(254, 168, 98);
+}
+
+.cont-logo-menu img {
+    width: 100px;
+    /* Ajusta el tamaño de la imagen */
+    display: block;
+    margin-top: 2%;
+}
+
+.cont-logo-menu p {
+    font-size: 20px;
+    /* Tamaño del texto más grande */
+    font-weight: bold;
+    /* Hace el texto más grueso */
+    margin-top: 5px;
+}
+
+.cont-logo-menu ul {
+    list-style: none;
+    /* Quita los estilos de lista (puntos o números) */
+    display: flex;
+    /* Hace que los elementos <li> se alineen en fila */
+    gap: 50px;
+    padding: 0;
+    margin-top: 25px;
+}
+
+.cont-logo-menu nav ul li a {
+
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(18, 33, 39);
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+@media (max-width: 768px) {
+
+    .cont-logo-menu  {
+
+        border-radius: 20px;
+        position: sticky;
+    }
+
+       
+}

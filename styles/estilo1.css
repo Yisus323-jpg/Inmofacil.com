@@ -1,0 +1,637 @@
+/*-----evita desbordamiento de la pagina en móviles */
+
+html,
+body {
+    overflow-x: hidden;
+    /* Oculta el scroll horizontal */
+    max-width: 100%;
+    /* Evita que el contenido crezca más allá del ancho de la pantalla */
+   
+}
+
+
+
+
+/*-------logo y nombre-menu-------*/
+
+/*----Usa flexbox con column para organizar los elementos en una columna centrada.------------*/
+
+.cont-logo-menu {
+    display: flex;
+    /* Usa Flexbox para organizar los elementos */
+    flex-direction: column;
+    /* Los elementos se apilan en columna */
+    align-items: center;
+    /* Centra los elementos horizontalmente */
+    text-align: center;
+    /* Asegura que el texto esté centrado */
+    color: rgb(25, 19, 108);
+    background-color: rgb(215, 244, 250) ;
+
+}
+
+.cont-logo-menu img {
+    width: 100px;
+    /* Ajusta el tamaño de la imagen */
+    flex: 1;
+    margin-top: 10px;
+}
+
+.cont-logo-menu p {
+    font-size: 20px;
+    /* Tamaño del texto más grande */
+    font-weight: bold;
+    /* Hace el texto más grueso */
+    margin-top: 5px;
+}
+
+.cont-logo-menu ul {
+    list-style: none;
+    /* Quita los estilos de lista (puntos o números) */
+    display: flex;
+    /* Hace que los elementos <li> se alineen en fila */
+    gap: 50px;
+    padding: 0;
+    
+}
+
+.cont-logo-menu nav ul li a {
+
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(18, 33, 39);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    
+       
+}
+
+@media (max-width: 768px) {
+
+    .cont-logo-menu {
+
+        border-radius: 20px;
+        position: sticky;
+        max-width: 100%;
+    }
+    .cont-logo-menu nav ul li a {
+
+        font-size: 100%;
+        text-align: center;
+        
+        
+    }
+}
+    
+
+/*-------imagen-texto principal -------*/
+
+.cont-img-text1 {
+
+
+    display: flex;
+    max-width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    /* Para que los elementos se ajusten en pantallas pequeñas */
+}
+
+.cont-img-text1 img {
+
+    max-width: 100%;
+    flex: 1;
+    padding: 4px;
+    height: auto;
+    /* Para mantener la proporción de la imagen */
+   
+}
+
+/* Media Query para pantallas grandes (PC o laptops) */
+@media (min-width: 1024px) {
+    .cont-img-text1 img {
+        max-width: 40%;
+        /* Reduce el tamaño de la imagen en pantallas grandes */
+       
+
+    }
+}
+
+@media (max-width: 768px) {
+
+    .cont-img-text1 img{
+
+        border-radius: 20px;
+    }
+}
+
+
+
+
+/*-------texto principal -------*/
+
+
+
+.cont-text {
+
+
+    flex: 1;
+    text-align: center;
+    box-sizing: border-box;
+    /* Para que el padding no afecte al tamaño total */
+
+
+}
+
+.cont-text h1 {
+
+
+    font-size: 4em;
+    /* Reduje el tamaño del texto a una escala más apropiada */
+    margin: auto;
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(43, 43, 43);
+    margin-top: 30PX;
+
+}
+
+.cont-text p {
+
+    font-size: 150%;
+    /* Reduje el tamaño del texto para mayor legibilidad */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.6;
+    margin: auto;
+    margin-top: 30px;
+    max-width: 70%;
+    padding: 10px;
+    /* Añadí un poco de espacio alrededor del texto */
+}
+
+
+/* Media Query para dispositivos móviles (si necesitas ajustes específicos) */
+@media (max-width: 768px) {
+    .cont-img-text1 {
+        flex-direction: column;
+        /* Apila la imagen y el texto verticalmente en pantallas pequeñas */
+        max-width: 100%;
+        /* Asegura que el contenedor no se desborde */
+    }
+
+    .cont-img-text1 img {
+        max-width: 100%;
+        /* Asegura que la imagen ocupe el 100% del ancho disponible */
+        padding: 0;
+        /* Elimina el padding en pantallas pequeñas */
+    }
+
+    .cont-text {
+        max-width: 100%;
+        /* Hace que el texto ocupe todo el ancho disponible */
+        padding: 15px;
+    }
+
+    .cont-text h1 {
+        font-size: 140%;
+        /* Reduce el tamaño del encabezado para pantallas pequeñas */
+    }
+
+    .cont-text p {
+        font-size: 100%;
+        /* Ajusta el tamaño del párrafo para pantallas pequeñas */
+        max-width: 100%;
+        /* Asegura que el texto no sea muy ancho */
+    }
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*-----------quienes somos-------- */
+
+/* Contenedor principal */
+
+.contenedor {
+
+
+    position: relative;
+    width: 90%;
+    height: 400px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 8%;
+    margin-bottom: 6%;
+
+}
+
+.fondo-imagen {
+
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    background-image: url("../img/terraza2.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    left: 5%;
+
+}
+
+
+.fondo-texto {
+    position: relative;
+    margin: auto;
+    border-radius: 20px;
+    top: 20%;
+    padding: 30px;
+    width: 70%;
+    background-color: white;
+    opacity: 0.6;
+}
+
+
+.fondo-texto h2 {
+
+
+    text-align: center;
+    font-size: 400%;
+    margin: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(1, 1, 1);
+}
+
+.fondo-texto p {
+
+
+    font-weight: bold;
+    font-size: 130%;
+    line-height: 1.6;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+/* Media Query para dispositivos móviles (pantallas pequeñas) */
+@media (max-width: 768px) {
+
+    /* Ajuste del contenedor */
+    .contenedor {
+        height: auto;
+        /* Mantén la misma altura para que sea proporcional */
+
+    }
+
+    /* Fondo de la imagen */
+    .fondo-imagen {
+        background-position: top center;
+        /* Cambié a 'top' para asegurarnos de que la imagen se alinee desde la parte superior */
+        border-radius: 20px;
+        width: 90%;
+    }
+
+    /* Ajuste del texto */
+    .fondo-texto {
+        width: 80%;
+        /* Reduce el ancho del texto en móviles */
+        padding: 20px;
+        /* Reduce el padding en dispositivos pequeños */
+    }
+
+    .fondo-texto h2 {
+        font-size: 180%;
+        /* Reduce el tamaño del título en móviles */
+        margin-bottom: 10px;
+        /* Menos espacio debajo del título */
+    }
+
+    .fondo-texto p {
+        font-size: 100%;
+        /* Reduce el tamaño del párrafo en móviles */
+    }
+}
+
+/*---------------------------por que trabajar con nosotros --------------------------------------------------*/
+
+.cont-h2 {
+
+    font-size: 300%;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(1, 1, 1);
+    max-width: 80%;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: rgb(215, 244, 250) ;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+
+/*---lista - por que trabajar con nosotros----*/
+.cont-list-job {
+
+ 
+    display: block;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin: auto;
+    
+}
+
+.cont-list-job ul {
+
+    text-align: center;
+    list-style: none;
+}
+
+.cont-list-job li {
+
+    
+    text-align: center;
+    font-size: 150%;
+   
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px;
+    max-width: 50%;
+    margin: auto;
+    margin-top: 1%;
+    
+   
+}
+   
+@media (max-width: 768px) {
+
+    .cont-h2 {
+
+        font-size: 130%;
+    }
+
+    .cont-list-job {
+      
+
+        font-size:65%;
+        margin-right: 30px;
+        margin: auto;
+        max-width: 90%;
+        
+    }
+
+    .cont-list-job ul li {
+
+        max-width: 90%;
+        margin-right: 14%;
+        margin-top: 0;
+        margin-bottom: 0;
+        
+        
+    }
+        
+        
+}
+
+
+/*-----------------------------------------contáctenos x WhatsApp--------------------------------*/
+
+
+
+.cont-contacto {
+
+    margin-top: 3%;
+    margin-bottom: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.cont-contacto img {
+
+    max-width: 80px;
+   flex: 1;
+   border-radius: 20px;
+   border: 1px solid black;
+}
+
+.cont-contacto h5 {
+
+    max-width: 100%;
+    font-size: 200%;
+    font-weight: bold;
+    color: rgb(18, 33, 39);
+}
+
+@media (max-width: 768px) {
+    .cont-contacto {
+        flex-direction: column; /* Acomoda elementos en columna */
+        gap: 10px;
+    }
+
+    .cont-contacto img {
+        max-width: 90px; /* Reduce el tamaño de la imagen en móviles */
+    }
+
+    .cont-contacto p {
+        font-size: 130%; /* Reduce el tamaño del texto en móviles */
+    }
+}
+
+
+hr {
+
+    border: 1px solid gray;
+    max-width: 70%;
+}
+
+/*-----------Galería de texto-img-----------------*/
+
+/*------texto-galería-h2-------*/
+
+
+.text-galeria {
+
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 200%;
+    text-align: center;
+    line-height: 1.6;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.text {
+
+    
+    
+    font-size: 150%;
+    max-width: 80%;
+    margin: auto;
+}
+
+/*------galería-img-------*/
+
+.galeria {
+    display: flex;
+    max-width: 100%;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: auto;
+    
+}
+
+.galeria img {
+
+  width: 300px;
+  height: 300px;
+  transition: transform 0.2s ease; /* Transición suave */
+  object-fit: cover; /* Mantiene la proporción de las imágenes */
+  border-radius: 15px;
+}
+
+.galeria img:hover {
+    transform: scale(2.0); /* Aumenta el tamaño de la imagen */
+
+}
+
+
+
+@media (max-width: 758px) {
+    .text-galeria {
+        font-size: 150%;  /* Reducimos el tamaño del texto para pantallas pequeñas */
+    }
+    
+    .galeria img {
+        width: 100%;  /* Asegura que las imágenes ocupen el 100% del ancho */
+        height: auto;  /* Mantiene la proporción de la imagen */
+    }
+
+    .text-galeria {
+
+        font-size: 120%;
+        padding: 5%;
+    }
+
+    .text {
+
+        font-size: 120%;
+        margin: auto;
+    }
+
+    /* Efecto de zoom al pasar el ratón */
+.galeria img:hover {
+    transform: none;  /* Elimina el efecto de zoom */
+}
+
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+   
+    
+    
+    
+   
+
+
+   
+
+
+
+
+
+
+/*---------------------------footer------------------------------------------------------*/
+
+.cont-foot {
+
+    
+    display: flex;
+    margin-bottom: 6%;
+   
+    align-items: center; /* Centra la imagen y el texto */
+    justify-content: center;
+    width: 80%;
+   
+    margin: 5% auto;
+    background-color: rgb(215, 244, 250) ;
+    text-align: center;
+   
+
+}
+
+.cont-foot img {
+
+    max-width: 80px;
+    flex: 1;
+    padding: 20px;
+    border-radius: 20px;
+
+}
+
+.cont-foot p {
+
+    
+    flex: 1;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 110%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    max-width: 60%;
+}
+    
+@media (max-width: 768px) {
+    .cont-foot {
+        max-width: 100%;
+        height: 50%;
+        border-radius: 20px;
+    }
+    .cont-foot img {
+        max-width: 80px;
+        margin-right: 40px; /* Reducir espacio entre imagen y texto */
+        margin: auto;
+        
+        
+    }
+    .cont-foot p {
+        width: 60%;
+        font-size: 80%;
+        margin-top: 10px;
+
+    }
+}
+        
+        
+        
+        
+     
+       
+
